@@ -7,7 +7,8 @@ A geek, a lifelong learner。
 #### changelog
 
 2021:
-🌱 I’m currently learning Go language and trying to be a Gopher.
+
+- 🌱 I’m currently learning Go language and trying to be a Gopher.
 
 ![jump_jump github stats](https://github-readme-stats.vercel.app/api?username=wsafight&show_icons=true&theme=radical) 
 <!--
