@@ -19,7 +19,7 @@ I think：
  
 <p align="center">
   <a href="https://github.com/hsfzxjy">
-    <img src="https://github-readme-stats.vercel.app/api?username=wsafight&show_icons=true&theme=radical" />
+    <img src="https://github-readme-stats.vercel.app/api?username=wsafight&show_icons=true" />
   </a>
   <a href="https://github.com/hsfzxjy">
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=wsafight&layout=compact&langs_count=9&hide=Component+Pascal" />
