@@ -17,9 +17,18 @@ I think：
 
 - 🌱 I’m currently learning Go language and trying to be a Gopher.
 
-![jump_jump github stats](https://github-readme-stats.vercel.app/api?username=wsafight&show_icons=true&theme=radical) 
+![jump_jump github stats]() 
 <!--
 **wsafight/wsafight** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+
+<p align="center">
+  <a href="https://github.com/hsfzxjy">
+    <img src="https://github-readme-stats.vercel.app/api?username=wsafight&show_icons=true&theme=radical" />
+  </a>
+  <a href="https://github.com/hsfzxjy">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=wsafight&layout=compact&langs_count=9&hide=Component+Pascal" />
+  </a>
+ </p>
 
 Here are some ideas to get you started:
 
