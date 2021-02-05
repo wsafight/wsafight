@@ -18,10 +18,10 @@ I think：
 - 🌱 I’m currently learning Go language and trying to be a Gopher.
  
 <p align="center">
-  <a href="https://github.com/hsfzxjy">
+  <a href="https://github.com/wsafight">
     <img src="https://github-readme-stats.vercel.app/api?username=wsafight&show_icons=true" />
   </a>
-  <a href="https://github.com/hsfzxjy">
+  <a href="https://github.com/wsafight">
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=wsafight&layout=compact&langs_count=9&hide=Component+Pascal" />
   </a>
  </p>
