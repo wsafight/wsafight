@@ -9,8 +9,6 @@ I think：
 
 > Great projects only had a few people at first
 
-> It’s easy to learn, but hard to use well
-
 #### changelog
 
 2021:
