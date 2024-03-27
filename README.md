@@ -9,6 +9,8 @@ I think：
 
 > Great projects only had a few people at first
 
+![profile-counter](https://profile-counter.glitch.me/wsafight/count.svg)
+
 #### changelog
 
 2021:
