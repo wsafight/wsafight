@@ -1,15 +1,14 @@
 ### Hi there 👋
 
+![profile-counter](https://profile-counter.glitch.me/wsafight/count.svg)
+
 A fat man who is losing weight。
 
 A geek, a lifelong learner。
 
-
 I think：
 
 > Great projects only had a few people at first
-
-![profile-counter](https://profile-counter.glitch.me/wsafight/count.svg)
 
 #### changelog
 
