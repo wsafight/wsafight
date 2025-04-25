@@ -15,6 +15,9 @@ I think：
 2021:
 
 - 🌱 I’m currently learning Go language and trying to be a Gopher.
+
+2025:
+- justaibun
  
 <p align="center">
   <a href="https://github.com/wsafight">
