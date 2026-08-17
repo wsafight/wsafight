@@ -1,0 +1,85 @@
+name: Refresh GitHub stats
+
+on:
+  schedule:
+    # 00:00 UTC is 08:00 in Asia/Shanghai.
+    - cron: "0 0 1,16 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-github-stats
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Download stats cards
+        shell: bash
+        env:
+          PROFILE_USERNAME: ${{ github.repository_owner }}
+        run: |
+          set -euo pipefail
+
+          mkdir -p profile-stats
+
+          fetch_card() {
+            local output="$1"
+            local url="$2"
+            local temporary_file
+            temporary_file="$(mktemp)"
+
+            curl \
+              --fail \
+              --location \
+              --retry 3 \
+              --retry-all-errors \
+              --silent \
+              --show-error \
+              "$url" \
+              --output "$temporary_file"
+
+            if ! grep -q '<svg' "$temporary_file"; then
+              echo "Downloaded content is not an SVG: $url" >&2
+              rm -f "$temporary_file"
+              return 1
+            fi
+
+            if grep -Eqi 'PAT_1|Something went wrong|rate limit|GitHub token' "$temporary_file"; then
+              echo "Stats provider returned an error card: $url" >&2
+              rm -f "$temporary_file"
+              return 1
+            fi
+
+            mv "$temporary_file" "$output"
+          }
+
+          fetch_card \
+            profile-stats/github-stats.svg \
+            "https://github-profile-summary-cards.vercel.app/api/cards/stats?username=${PROFILE_USERNAME}&theme=default"
+
+          fetch_card \
+            profile-stats/top-langs.svg \
+            "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=${PROFILE_USERNAME}&theme=default"
+
+      - name: Commit updated cards
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git add profile-stats
+          if git diff --cached --quiet; then
+            echo "Stats cards are already up to date."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh GitHub stats"
+          git push
