@@ -6,7 +6,7 @@ A geek, a lifelong learner.
 
 > Great projects only had a few people at first
 
-Shanghai. I write TypeScript and Rust, and I keep notes on [my blog](https://wsafight.github.io/personBlog/).
+Hangzhou. I write TypeScript and Rust, and I keep notes on [my blog](https://wsafight.github.io/personBlog/).
 
 **Now**
 
